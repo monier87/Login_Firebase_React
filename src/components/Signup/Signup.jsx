@@ -3,7 +3,8 @@ import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import {auth} from "../../firebase"
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
-
+import { async } from "@firebase/util"
+import {InputControl} from "../inputControl/InputControl"
 
 export function Signup(){
   const navigate=useNavigate();
@@ -33,6 +34,21 @@ export function Signup(){
   return(<div className={styles.container}>
     <div className={styles.innerBox}>
       <h1 className={styles.heading}>Registro</h1>
+      <InputControl label="Name"
+      placeholder="Ingrese un nombre"
+      onChange={
+        (event)=> setvalues((prev)=>({...prev, name:event.target.value}))
+      }/>
+      <InputControl label="Email"
+      placeholder="Ingrese su cuenta de Correo"
+      onChange={
+        (event)=> setvalues((prev)=>({...prev, name:event.target.value}))
+      }/>
+      <InputControl label="Contraseña"
+      placeholder="Ingrese una contraseña"
+      onChange={
+        (event)=> setvalues((prev)=>({...prev, name:event.target.value}))
+      }/>
 
     </div>
 
