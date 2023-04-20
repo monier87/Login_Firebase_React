@@ -1,4 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { auth } from "../../firebase";
+
+function salir(){
+  return auth.signOut()
+  Navigate("/");
+}
 
 export function Home(props){
   return(<div>
@@ -17,6 +23,7 @@ export function Home(props){
       </div>
     </div>
     <h2>{props.name?`Bienvenido -${props.name}`:"Inicie sesion"}</h2>
+    <button onClick={salir}>Salir</button>
   </div>
   )
 }
