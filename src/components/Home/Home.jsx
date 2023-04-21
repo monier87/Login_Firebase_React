@@ -1,5 +1,6 @@
 import { Link, Navigate } from "react-router-dom";
 import { auth } from "../../firebase";
+import styles from "./home.css";
 
 function salir(){
   return auth.signOut()
@@ -10,7 +11,7 @@ export function Home(props){
   return(<div>
     <div>
       <div>
-        <h1>
+        <h1 className="Hola">
           <Link to="/login">Login</Link>
         </h1>
 

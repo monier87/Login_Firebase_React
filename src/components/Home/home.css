@@ -1,0 +1,48 @@
+/* Estilos para el contenedor principal */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  /* Estilos para los enlaces de Login y Registrar */
+  .hola {
+    font-size: 24px;
+    margin: 10px;
+  }
+  
+  h1 a {
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  h1 a:hover {
+    color: #666;
+  }
+  
+  /* Estilos para el mensaje de bienvenida */
+  h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para el botón de salir */
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f44336;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #e53935;
+  }
+  
